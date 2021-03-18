@@ -10,10 +10,22 @@ const server =
       res.setHeader('Content-Type', 'text/html') //Set the mime type HTML
 
       res.write('<html> <head> <title> Served </title> </head>')
-      res.write('<body>')
+      res.write('<body><style>table, th, td {border: 2px solid black;border-collapse: collapse;}</style>')
       res.write('Content \n')
       res.write('More content \n')
-      res.write('Hello World')    
+      res.write('Hello World')
+      res.write('<table>')
+      res.write('<tr>')
+      res.write('<th>Location</th>')
+      res.write('<th>Number of Hours</th>')
+      res.write('<th>Amount of Money</th>')
+      res.write('</tr>')
+      res.write('<tr>')
+      res.write('<td>pune</td>')
+      res.write('<td>120 hours</td>')
+      res.write('<td>400$</td>')
+      res.write('</tr>')
+      res.write('<tr><td>Banglore</td><td>96 hours</td><td>300$</td></tr><tr><td>vizag</td><td>120 hours</td><td>350$</td></tr><tr><td>hyderabad</td><td>96 hours</td><td>300$</td></tr></table>')
       res.end('</body></html>')
       //Close the response
     }                           
